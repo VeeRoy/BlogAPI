@@ -8,7 +8,7 @@ const postRoute = require('./routes/postRoute')
 require('dotenv').config()
 
 
-const PORT = 5667
+const PORT = 5000
 
 const app = express()
 Dbconnect()
