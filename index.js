@@ -25,6 +25,12 @@ app.get('/', (req, res)=>{
     res.send('home page')
 })
 
+app.use((err, req, res, next) => {
+    const errorStatus = err.status || 500
+    res.status(errorStatus).send(err.message)
+    next()
+})
+
 app.listen(PORT, ()=>{
     console.log('server started')
 })
