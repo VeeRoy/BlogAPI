@@ -16,6 +16,11 @@ const userModel = require('../models/userModel')
     res.send(IDpost)
 }
 
+const getAll = async (req, res) =>{
+    const IDpost = await post.find({}).limit(20)
+    res.send(IDpost)
+}
+
 const getPostsByID = async(req, res) =>{
     const id = req.params.id
     const IDpost = await post.findById({_id: id})
@@ -86,6 +91,7 @@ const deleteById = async(req, res) =>{
 
 
 module.exports = { getPosts, 
+                    getAll,
                 getPostsByID, 
                 createPost,
                 updateById,

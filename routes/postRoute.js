@@ -10,6 +10,8 @@ server.post('/', passport.authenticate('jwt', { session: false }), controller.cr
 
 server.get('/', controller.getPosts) // get posts by other parameters
 
+server.get('/all', controller.getAll)  // get all posts
+
 server.get('/:id', controller.getPostsByID) // get posts by id
 
 // find by id and update state and the blog posts
