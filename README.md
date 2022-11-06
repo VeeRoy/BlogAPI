@@ -1,5 +1,8 @@
 <h2>This is a blog post API</h2>
 
+You can get all posts by <br>
+/post/all
+
 You can query the posts by <br>
 /post and sending a query parameter
 eg. <h3> /post?state=published  ,   
